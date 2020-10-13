@@ -1,20 +1,15 @@
 
 
 <app-new-dealer-sale #newDealerSaleComponent></app-new-dealer-sale>
-    <!-- End : Dealer Sale-->
+<app-add-products *ngIf="isShow" [sale]="this.model"></app-add-products>
+<app-sale-summary #saleSummaryComponent></app-sale-summary>
 
-    <!-- Start : Add-Products -->
-    <app-add-products  *ngIf="isShow" [sale]="this.model" ></app-add-products>
-    <!-- End : Add-Products -->
-    
-    <app-sale-summary #saleSummaryComponent></app-sale-summary>
-
-  <div class="col-8 offset-3 mt-2">
-    <div class="footer mr-3">
-      <button (click)="save()" class="btn btn-success mr-3" type="button">Save(Complete)</button>
-      <button class="btn btn-primary mr-3" (cilck)="reset()">Reset</button>
-    </div>
+<div class="col-8 offset-3 mt-2">
+  <div class="footer mr-3">
+    <button (click)="save()" class="btn btn-success mr-3" type="button">Save(Complete)</button>
+    <button class="btn btn-primary mr-3" (cilck)="reset()">Reset</button>
   </div>
+</div>
 
-<!-- </form> -->
+
 

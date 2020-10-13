@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  url_prematch: 'https://prematch.lsports.eu/OddService/',
+  url_inplay: 'https://inplay.lsports.eu/OddService/'
 };
 
 /*

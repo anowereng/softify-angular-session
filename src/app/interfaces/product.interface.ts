@@ -6,4 +6,3 @@ export interface Product {
     stock: number;
     qty: number;
   }
-  

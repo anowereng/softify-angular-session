@@ -10,7 +10,6 @@ import { Subscription } from 'rxjs';
 })
 export class SaleSummaryComponent implements OnInit {
 
-  // model: DealerSaleModel
   private subscription: Subscription;
   public model: DealerSaleModel
   
