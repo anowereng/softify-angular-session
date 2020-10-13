@@ -1,0 +1,8 @@
+
+<ul *ngFor="let item of sportsData">
+    <li>
+    <a [routerLink]="['/', 'sports',item.Id]" class="btn btn-success" type="button">
+
+{{item.Name}}</a>
+</li>
+</ul>
