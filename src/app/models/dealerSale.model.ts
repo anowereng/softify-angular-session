@@ -1,4 +1,5 @@
-import { Product } from '../interfaces/product.interface';
+import { Product } from './../interfaces/product.interface';
+import { ProductViewModel } from './product-view.model';
 
 
 export class DealerSaleModel {
@@ -15,4 +16,6 @@ export class DealerSaleModel {
   paid: number;
   discount: number;
   remarks: string;
+  membershipCardNo: string;
+  point: string;
 }
