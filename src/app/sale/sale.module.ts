@@ -1,3 +1,4 @@
+import { SaleListComponent } from './sale-list/sale-list.component';
 import { SaleSummaryComponent } from './shared/sale-summary/sale-summary.component';
 import { SaleService } from './service/sale.service';
 import { NewDealerSaleComponent } from './shared/new-dealer-sale/new-dealer-sale.component';
@@ -20,7 +21,8 @@ import { SaleRoutingModule } from './sale-routing.module';
     AddProductsComponent,
     NewCustomerSaleComponent,
     NewDealerSaleComponent,
-    SaleSummaryComponent
+    SaleSummaryComponent,
+    SaleListComponent
   ],
   imports: [
     CommonModule,

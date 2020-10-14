@@ -12,17 +12,17 @@ export class SaleSummaryComponent implements OnInit {
 
   private subscription: Subscription;
   public model: DealerSaleModel
-  
+
   constructor(
-    private _saleService:SaleService
-  ) { 
-            this.model = new DealerSaleModel();
+    private _saleService: SaleService
+  ) {
+    this.model = new DealerSaleModel();
     this.subscription = this._saleService.getSale().subscribe(
       (sale: DealerSaleModel) => {
-          this.model = sale;
+        this.model = sale;
       });
     debugger;
-      // this.model = new DealerSaleModel();
+    // this.model = new DealerSaleModel();
   }
 
   ngOnInit() {
@@ -30,19 +30,19 @@ export class SaleSummaryComponent implements OnInit {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
-}
-
-paidTotalCalculate() {
-  debugger;
-  if (this.model.paid > 0) {
-    this.model.due = this.model.total - this.model.paid
   }
-}
+
+  paidTotalCalculate() {
+    debugger;
+    if (this.model.paid > 0) {
+      this.model.due = this.model.total - this.model.paid
+    }
+  }
 
 
-totalDiscount() {
-  debugger;
-  this.model.total -= (this.model.total * this.model.discount) / 100;
-}
+  totalDiscount() {
+    debugger;
+    this.model.total -= (this.model.total * this.model.discount) / 100;
+  }
 
 }

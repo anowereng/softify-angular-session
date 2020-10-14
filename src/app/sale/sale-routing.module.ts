@@ -1,3 +1,4 @@
+import { SaleListComponent } from './sale-list/sale-list.component';
 import { DealerSaleComponent } from './dealer-sale/dealer-sale.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,6 +19,13 @@ const routes: Routes = [
       {
         path: 'dealer-sale',
         component: DealerSaleComponent,
+        data: {
+          title: 'Dealer Online Sale List'
+        }
+      },
+      {
+        path: 'sale-list',
+        component: SaleListComponent,
         data: {
           title: 'Dealer Online Sale List'
         }

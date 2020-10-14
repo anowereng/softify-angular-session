@@ -25,6 +25,7 @@ export class AddProductsComponent implements OnInit {
     ngOnInit(): void {
       this.productsList = this.saleDropdownService.getProductsList();
     }
+
     removeCart(index: number) {
       this.sale.products.splice(index, 1)
       this.totalPrice();

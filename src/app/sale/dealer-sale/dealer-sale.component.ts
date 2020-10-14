@@ -21,46 +21,39 @@ export class DealerSaleComponent implements OnInit {
   productsList: Product[];
   private subscription: Subscription;
 
-  @ViewChild("NewDealerSaleComponent")
-  newDealerSaleComponent: NewDealerSaleComponent
+  //@ViewChild("NewDealerSaleComponent")
+  //newDealerSaleComponent: NewDealerSaleComponent
 
-  @ViewChild("SaleSummaryComponent")
-  saleSummaryComponent: SaleSummaryComponent
-  
+  //@ViewChild("SaleSummaryComponent")
+  //saleSummaryComponent: SaleSummaryComponent
+
   constructor(
     private toastr: ToastrService,
     private saleDropdownService: SaleDropdownService,
-    private _saleService:SaleService
-    
-  ) { 
+    private _saleService: SaleService
+
+  ) {
     this.subscription = this._saleService.getSale().subscribe(
       (sale: DealerSaleModel) => {
-          // this.savingDisabled = false;
+        // this.savingDisabled = false;
       });
     this.model = new DealerSaleModel();
     this.isShow = true;
   }
 
-    ngOnInit(): void {
-      this.init();
-    }
-  
-    ngOnDestroy() {
-      this.subscription.unsubscribe();
-    }
+  ngOnInit(): void {
+    this.init();
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
   init() {
     this.productsList = this.saleDropdownService.getProductsList();
   }
- 
+
   save() {
-
-  
-    // this.model = this.saleSummaryComponent.model;
     console.log(this.model)
-    console.log(this.saleSummaryComponent)
-    // this.model.membershipCardNo = this.saleSummaryComponent.model.membershipCardNo;
-    // this.model.remarks = this.saleSummaryComponent.model.remarks;
-
     this.toastr.success("Saved Successfully")
   }
   reset() {
