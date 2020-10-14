@@ -4,6 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/interfaces/product.interface';
 import { SaleDropdownService } from 'src/app/services/saleDropdown.service';
 import { ProductViewModel } from 'src/app/models/product-view.model';
+import { SaleService } from '../../service/sale.service';
 
 @Component({
   selector: 'app-add-products',
@@ -15,15 +16,18 @@ export class AddProductsComponent implements OnInit {
    
    productsList: Product[];
   constructor(
-    private saleDropdownService: SaleDropdownService
-  ) { }
+    private saleDropdownService: SaleDropdownService,
+    private _saleService: SaleService
+  ) { 
+
+  }
 
     ngOnInit(): void {
       this.productsList = this.saleDropdownService.getProductsList();
     }
     removeCart(index: number) {
       this.sale.products.splice(index, 1)
-      this.totalDiscount();
+      this.totalPrice();
     }
     totalPrice() {
       debugger;
@@ -33,27 +37,14 @@ export class AddProductsComponent implements OnInit {
       }
       this.sale.total = total;
       console.log(this.sale.total);
+      this._saleService.setSale(this.sale);
   
     }
-    paidTotalCalculate() {
-      debugger;
-      if (this.sale.paid > 0) {
-        this.sale.due = this.sale.total - this.sale.paid
-      }
-    }
-  
-  
-    totalDiscount() {
-      this.sale.total = 0;
-      this.totalPrice();
-      debugger;
-      this.sale.total -= (this.sale.total * this.sale.discount) / 100;
-    }
+    
     addtoCart(product: Product) {
       product.qty = 1;
       debugger;
       this.sale.products.push(product)
       this.totalPrice();
-      this.totalDiscount();
     }
 }
