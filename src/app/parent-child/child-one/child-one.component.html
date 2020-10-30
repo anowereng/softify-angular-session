@@ -1,0 +1,19 @@
+<p>child-one works!</p>
+
+{{destinationWarehouses |json}}
+{{model |json}}
+<form #brandForm="ngForm" (ngSubmit)="brandForm.form.valid">
+  <div class="form-group">
+    <label for="contactMethod">Contact method</label>
+    <select name="contactMethod"
+            id="contactMethod"
+            (change)="changeWareHouse()"
+            class="form-control"
+            [(ngModel)]="model.destinationWareHouseId">
+      <option *ngFor="let x of destinationWarehouses">
+
+        {{ x.name }}
+      </option>
+    </select>
+  </div>
+  </form>

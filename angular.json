@@ -99,11 +99,9 @@
               "src/assets"
             ],
             "styles": [
-
               "src/styles.css"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           }
         },
         "lint": {
@@ -132,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "softify-angular-session"
+    }
+  },
+  "defaultProject": "softify-angular-session",
+  "cli": {
+    "analytics": "9c0155c3-4296-445f-a9e9-23f64fc4a0c5"
+  }
 }

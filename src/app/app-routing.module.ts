@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'sports', component: SportsComponent },
   { path: 'sports/:id', component: SportsInfoComponent },
   { path: 'sale', loadChildren: () => import('./sale/sale.module').then(m => m.SaleModule), },
+  { path: 'parent-child', loadChildren: () => import('./parent-child/parent-child.module').then(m => m.ParentChildModule), },
 ];
 
 @NgModule({ 
