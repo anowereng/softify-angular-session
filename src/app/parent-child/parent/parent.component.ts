@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-parent',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
+  public employees: any = [];
 
-  constructor() { }
+  constructor(private employeeService: EmployeeService) {
 
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {
+    this.employees = this.employeeService.getEmployess();
+  }
 }

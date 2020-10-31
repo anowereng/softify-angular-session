@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChildOneComponent } from './child-one/child-one.component';
 import { ChildTwoComponent } from './child-two/child-two.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,13 @@ const routes: Routes = [
       {
         path: 'child-two',
         component: ChildTwoComponent,
+        data: {
+          title: 'Dealer Online Sale List'
+        }
+      },
+       {
+        path: 'parent',
+        component: ParentComponent,
         data: {
           title: 'Dealer Online Sale List'
         }

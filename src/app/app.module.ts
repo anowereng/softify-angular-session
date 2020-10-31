@@ -20,7 +20,7 @@ import { SportsInfoComponent } from './sports-info/sports-info.component';
     HeaderComponent,
     FooterComponent,
       SportsComponent,
-      SportsInfoComponent,
+      SportsInfoComponent
    ],
   imports: [
     BrowserModule,
