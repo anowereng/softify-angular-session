@@ -1,2 +1,38 @@
+<!--<app-child-one [employees]="employees"></app-child-one>-->
+<app-child-two [employee]="employee"></app-child-two>
+<a href="javascript:void(0)" class="mr-2" (click)="openModal(receipt)">  Receipt</a>
+<ng-template #receipt class="modal-dialog modal-lg">
+  <div class="modal-body">
+    <section id="demo">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-12 col-sm-12 text-center">
+                  <div class="col col-xs-12" style="text-align: center">
+                    <img class="img-responsive" style="height: 100px;" [src]="logoUrl" />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 text-center mt-4">
+                  <h4 class="card-title">Invoice/Bill</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-body">
 
-      <app-child-one [employees]="employees"></app-child-one>
+                <app-child-two [employee]="employee"></app-child-two>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="modal-footer">
+    <button printSectionId="demo" class="btn btn-info" [useExistingCss]="true" ngxPrint>Print</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modalRef.hide()">Close</button>
+  </div>
+</ng-template>

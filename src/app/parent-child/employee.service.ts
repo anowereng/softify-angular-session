@@ -19,6 +19,9 @@ export class EmployeeService {
   getEmployess(): Employee[] {
     return this.employees;
   }
+  getEmployesById(id?:string): Employee {
+    return this.employees.find(x=>x.code === id)
+  }
 
   //getSportsData():any {
   //  return this.http.get(UrlService.getSportsUrl + this.urlservice.commonparam).pipe(

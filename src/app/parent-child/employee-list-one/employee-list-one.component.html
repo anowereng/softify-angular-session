@@ -1,0 +1,51 @@
+
+
+<div class="col-8 offset-2">
+  <div class="card mt-2 ">
+    <div class="card-header">
+      <h4>Employee List</h4>
+    </div>
+    <div class="card-body">
+      <div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Code</th>
+              <th scope="col">gender</th>
+              <th scope="col">Birth</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Email</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of employees;let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{employee.name}}</td>
+              <td>{{employee.code}}</td>
+              <td>{{employee.gender}}</td>
+              <td>{{employee.dateOfBirth|date}}</td>
+              <td>{{employee.contactPreference}}</td>
+              <td>{{employee.phoneNumber}}</td>
+              <td>{{employee.email}}</td>
+              <td>
+                <a href="javascript:void(0)" (click)="Receipt(employee.code);" class="btn btn-sm btn-info">Receipt</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Start: Report One -->
+<!--<app-report-one [empid]="empid" *ngIf="isShow"></app-report-one>-->
+<!-- End: Report One -->
+<!-- Start: Report Two -->
+<!--<app-report-two [empid]="empid" *ngIf="isShow"></app-report-two>-->
+<!-- End: Report Two -->

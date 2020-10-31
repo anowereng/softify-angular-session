@@ -1,0 +1,193 @@
+<!--<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-static-name" class="modal-title pull-left">Static modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <section id="demo">
+          Report Data
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-12 col-sm-12 text-center">
+                      <div class="col col-xs-12" style="text-align: center">
+                        <img class="img-responsive" style="height: 100px;" [src]="logoUrl" />
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12 text-center mt-4">
+                      <h4 class="card-title">Invoice/Bill</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="col-6 offset-2">
+                      <div class="card mt-2 ">
+                        <div class="card-header">
+                          {{employee.name}}
+                        </div>
+                        <div class="card-body">
+                          <div>
+                            <div class="form-group">
+                              <label class="col-4 font-weight-bold">Code</label>
+                              <label class="col-8">{{employee.code}}</label>
+                            </div>
+
+                            <div class="form-group">
+                              <label class="col-4 font-weight-bold">gender</label>
+                              <label class="col-8">{{employee.gender}}</label>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-4 font-weight-bold">Birth</label>
+                              <label class="col-8">{{employee.dateOfBirth}}</label>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-4 font-weight-bold">Contact</label>
+                              <label class="col-8">{{employee.contactPreference}}</label>
+
+                            </div>
+                            <div class="form-group">
+                              <label class="col-4 font-weight-bold">Phone Number</label>
+                              <label class="col-8">{{employee.phoneNumber}}</label>
+
+                            </div>
+                            <div class="form-group">
+                              <label class="col-4 font-weight-bold">Email</label>
+                              <label class="col-8">{{employee.email}}</label>
+
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          End: Report Data
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button printSectionId="demo" class="btn btn-info" [useExistingCss]="true" ngxPrint>Print</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="staticModal.hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!--<ng-template #receipt class="modal-dialog modal-lg">
+  <div class="modal-body">
+    <section id="demo">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-12 col-sm-12 text-center">
+                  <div class="col col-xs-12" style="text-align: center">-->
+<!--<img class="img-responsive" style="height: 100px;" [src]="logoUrl" />-->
+<!--</div>
+    </div>
+    <div class="col-12 col-sm-12 text-center mt-4">
+      <h4 class="card-title">Invoice/Bill</h4>
+    </div>
+  </div>
+</div>
+<div class="card-content">
+  <div class="card-body">-->
+<!--<app-child-two [employee]="employee"></app-child-two>-->
+<!--</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="modal-footer">
+    <button printSectionId="demo" class="btn btn-info" [useExistingCss]="true" ngxPrint>Print</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modalRef.hide()">Close</button>
+  </div>
+</ng-template>-->
+
+  <div class="modal-body" #childModal>
+    <section id="demo">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-12 col-sm-12 text-center mt-4">
+                  <h4 class="card-title">Invoice/Bill</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-body">
+                <div class="col-10 offset-2">
+                  <div class="card mt-2 ">
+                    <div class="card-header">
+                      {{employee.name}}
+                    </div>
+                    <div class="card-body">
+                      <div>
+                        <div class="form-group">
+                          <label class="col-4 font-weight-bold">Code</label>
+                          <label class="col-8">{{employee.code}}</label>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-4 font-weight-bold">gender</label>
+                          <label class="col-8">{{employee.gender}}</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-4 font-weight-bold">Birth</label>
+                          <label class="col-8">{{employee.dateOfBirth}}</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-4 font-weight-bold">Contact</label>
+                          <label class="col-8">{{employee.contactPreference}}</label>
+
+                        </div>
+                        <div class="form-group">
+                          <label class="col-4 font-weight-bold">Phone Number</label>
+                          <label class="col-8">{{employee.phoneNumber}}</label>
+
+                        </div>
+                        <div class="form-group">
+                          <label class="col-4 font-weight-bold">Email</label>
+                          <label class="col-8">{{employee.email}}</label>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="modal-footer">
+      <button printSectionId="demo" class="btn btn-info" [useExistingCss]="true" ngxPrint>Print</button>
+      <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()">Close</button>
+    </div>
+  </div>
+
+
+   
+
+
+
