@@ -1,0 +1,20 @@
+
+<div *ngIf="isHelloVisible">
+   <p [ngStyle]="message" mouseover>hello</p> 
+    <input type="button" (click)="showWorld()" [ngClass]="helloclass" value="Show World">
+</div>
+
+<div *ngIf="!isHelloVisible">
+    <p [ngStyle]="message"  mouse-over-color="yellow">world</p> 
+    <input type="button" (click)="showHello()" [ngClass]="worldclass"  value="Show Hello">
+</div>
+
+<div class="mt-4">
+    <ul *ngFor="let data of somedata">
+        <li  mouse-over-color="green">{{data}}</li>
+    </ul>
+</div>
+<div>
+    <p>output directive example</p>
+    <input type="button" value="click me" (triple-click)="handleClick()"> 
+</div>
