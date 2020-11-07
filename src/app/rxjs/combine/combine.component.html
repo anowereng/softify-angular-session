@@ -1,0 +1,23 @@
+
+<table class="table table-bootstrap table-sm table-bordered">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Name</td>
+                <td>Code</td>
+                <td>Price</td>
+                <td>Catid</td>
+                <td>Category Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of proddata;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.code}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.catid}}</td>
+                <td>{{product.categoryName}}</td>
+            </tr>
+        </tbody>
+</table>
